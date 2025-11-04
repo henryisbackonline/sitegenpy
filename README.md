@@ -1,4 +1,4 @@
-# Minimal Python Static Site Generator
+# Python Static Site Generator
 This repository contains a small static site generator written in Python.
 It’s a personal project designed to work for me and my needs. If you think it might work for you too, I encourage you to clone this repo and experiment.
 
