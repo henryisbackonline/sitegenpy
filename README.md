@@ -5,7 +5,7 @@ It’s a personal project designed to work for me and my needs. If you think it 
 There's no how-to guide at the moment since it's mainly a personal project. However, I plan to include a simple setup guide down the road.
 
 # Overview
-A simple static site generator built with python and minimal dependencies. It's designed to do one thing -- generate a blog.
+A simple static site generator built with python and minimal dependencies. It's designed to do one thing - generate a blog.
 
 The generator converts `.md` files with YAML front matter into static HTML pages, applies a standard boilerplate with a link to a global stylesheet, and outputs a complete static site.
 
