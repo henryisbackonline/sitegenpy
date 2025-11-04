@@ -11,9 +11,16 @@ The generator converts `.md` files with YAML front matter into static HTML pages
 
 Designed around a clear and minimal folder layout:
 ```
-input/            → Source markdown posts  
-output/           → Generated HTML output  
-output/assets/    → CSS, fonts, images
+.
+├── input/                # input folder for all markdown
+└── output                # output folder for whole blog/
+    ├── _assets/
+    │   ├── fonts/
+    │   ├── global/       # theme, boilerplate, favicons
+    │   └── img/          # all images
+    ├── about/
+    ├── now/
+    └── posts/            #html posts
 ```
 
 # Dependencies
