@@ -1,0 +1,251 @@
+/* ============================================
+   Global Stylesheet
+   Author: @henryisonline in most places
+   ============================================ */
+
+/* --------------------------------
+   1. Local Font Imports (Full Set)
+   -------------------------------- */
+
+/* INTER DISPLAY — Sans-serif headings */
+@font-face {
+  font-family: "Inter Display";
+  src: url("../fonts/InterDisplay-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* SOURCE SERIF 4 — Body text */
+@font-face {
+  font-family: "Source Serif 4";
+  src: url("../fonts/SourceSerif4-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Source Serif 4";
+  src: url("../fonts/SourceSerif4-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Source Serif 4";
+  src: url("../fonts/SourceSerif4-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Source Serif 4";
+  src: url("../fonts/SourceSerif4-SemiBoldItalic.woff2") format("woff2");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* INPUT MONO — Code blocks */
+@font-face {
+  font-family: "Input Mono";
+  src: url("../fonts/InputMono-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ------------------------------
+   2. Root defaults & variables
+------------------------------- */
+
+:root {
+  --color-bg: #eeeeee;
+  --color-text: #1a1a1a;
+
+  --font-body: "Source Serif 4", Georgia, 'Times New Roman', serif;
+  --font-heading: "Inter Display", 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-mono: "Input Mono", 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
+
+  /* Base font size */
+  --font-size-base: 14pt;
+
+  /* Font weights */
+  --weight-regular: 400;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  /* Responsive spacing scale */
+  --space-xs: clamp(0.25rem, 0.2vw + 0.2rem, 0.5rem);
+  --space-sm: clamp(0.5rem, 0.4vw + 0.4rem, 1rem);
+  --space-md: clamp(1rem, 0.8vw + 0.8rem, 1.5rem);
+  --space-lg: clamp(1.5rem, 1.2vw + 1rem, 2rem);
+  --space-xl: clamp(2rem, 2vw + 1.5rem, 3rem);
+
+  /* Max readable line width ≈ 80 characters */
+  --max-line-length: 80ch;
+}
+
+/* ------------------------------
+   3. Base document setup
+------------------------------- */
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-weight: var(--weight-regular);
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ------------------------------
+   4. Content width & rhythm
+------------------------------- */
+
+main, article, section {
+  max-width: var(--max-line-length);
+  margin: 0 auto;
+  padding: var(--space-lg) var(--space-sm);
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: var(--space-sm);
+}
+
+p + p {
+  margin-top: var(--space-sm);
+}
+
+/* ------------------------------
+   5. Headings
+------------------------------- */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--color-text);
+  line-height: 1.25;
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-sm);
+}
+
+h1 {
+  font-weight: 700;
+  font-size: clamp(2rem, 4vw + 1rem, 2.75rem);
+}
+h2 {
+  font-weight: 700;
+  font-size: clamp(1.75rem, 3vw + 0.5rem, 2.25rem);
+}
+h3 {
+  font-weight: 700;
+  font-size: clamp(1.5rem, 2.5vw + 0.5rem, 1.75rem);
+}
+h4 {
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+h5 {
+  font-weight: 500;
+  font-size: 1.125rem;
+}
+h6 {
+  font-weight: 500;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ------------------------------
+   6. Inline formatting
+------------------------------- */
+
+em {
+  font-style: italic;
+  font-weight: var(--weight-regular);
+}
+
+strong {
+  font-weight: var(--weight-bold);
+}
+
+code, pre, kbd, samp {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-base);
+  background-color: #e4e4e4;
+  border-radius: 4px;
+}
+
+code {
+  padding: 0.15em 0.35em;
+}
+
+pre {
+  padding: var(--space-sm);
+  overflow-x: auto;
+}
+
+/* ------------------------------
+   7. Links
+------------------------------- */
+
+a {
+  color: var(--color-text);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+  transition: opacity 0.2s ease-in-out;
+}
+
+a:hover,
+a:focus {
+  opacity: 0.7;
+}
+
+/* ------------------------------
+   8. Lists
+------------------------------- */
+
+ul, ol {
+  margin: var(--space-sm) 0 var(--space-sm) var(--space-md);
+  padding: 0;
+}
+
+/* ------------------------------
+   9. Images & media
+------------------------------- */
+
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ------------------------------
+   10. Utility classes
+------------------------------- */
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
