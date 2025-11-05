@@ -28,4 +28,8 @@ Designed around a clear and minimal folder layout:
 - [pillow](https://pypi.org/project/pillow/) — resizes images to lighten the load
 
 # Environment
-This project uses [uv](https://docs.astral.sh/uv/) to manage dependencies and the Python environment.
+This project uses standard python tooling.
+
+To get started:
+- install [homebrew](brew.sh)
+- 
