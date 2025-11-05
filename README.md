@@ -32,4 +32,11 @@ This project uses standard python tooling.
 
 To get started:
 - install [homebrew](brew.sh)
-- 
+- install python (`brew install python`)
+- alias python in zsh to make your life easier (`alias python='python3'`)
+- run `python -m venv .venv` - this will create a virtual environment in the project root
+- activate the venv with `source .venv/bin/activate`
+  - the terminal should now be prefixed with `(.venv)`
+- run `pip install markdown-it-py pillow`
+
+That's it, everything is installed from scratch. If course, you could choose to install `pillow` and `markdown-it-py` systemwide withouth the `venv`, but i find this way a bit cleaner.
