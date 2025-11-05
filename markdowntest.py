@@ -1,4 +1,5 @@
-from markdown_it import MarkdownIT
+from pprint import pprint
+from markdown_it import MarkdownItimport 
 
 md = MarkdownIt()
-md.render("example string with *italics* and **bold** and `code`.")
+md.render("some *text*")
