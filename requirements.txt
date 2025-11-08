@@ -1,2 +1,3 @@
 markkdown-it-py
+mdit_py_plugins
 pillow
