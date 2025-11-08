@@ -32,5 +32,5 @@ with open ('testfile.md', 'r', encoding='utf-8') as f:
 
 html_output = md.render(markdown_text)
 
-with open ('testfile.hmlt', 'w', encoding='utf-8') as f:
+with open ('testfile.html', 'w', encoding='utf-8') as f:
     f.write(html_output)
