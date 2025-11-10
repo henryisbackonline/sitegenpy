@@ -1,7 +1,10 @@
+# =============================================================================================== #
+# FROM THE markdown-it-py docs
+
 # from markdown_it import MarkdownIt
 # from mdit_py_plugins.front_matter import front_matter_plugin
 # from mdit_py_plugins.footnote import footnote_plugin
-# 
+
 # md = (
 #     MarkdownIt()
 #     .use(front_matter_plugin)
@@ -12,16 +15,19 @@
 # ---
 # a: 1
 # ---
-# 
+
 # a | b
 # - | -
 # 1 | 2
-# 
+
 # A footnote [^1]
-# 
+
 # [^1]: some details
 # """)
 # print(md.render(text))
+
+# =============================================================================================== #
+# TESTING FILE READ AND WRITE
 
 from markdown_it import MarkdownIt
 
@@ -34,3 +40,5 @@ html_output = md.render(markdown_text)
 
 with open ('testfile.html', 'w', encoding='utf-8') as f:
     f.write(html_output)
+
+# =============================================================================================== #
