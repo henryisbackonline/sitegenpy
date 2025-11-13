@@ -44,3 +44,18 @@
 # =============================================================================================== #
 # TESTING MARKDOWN FRONTMATTER READING
 
+from markdown_it import MarkdownIt
+from mdit_py_plugins.front_matter import front_matter_plugin
+
+md = (
+    MarkdownIt("commonmark", {"html: True"})
+    .use(front_matter_plugin)
+)
+
+with open ('testfile.md', 'r', encoding='utf-8') as f:
+    markdown_text = f.read()
+
+html_output = md.render(markdown_text)
+
+with open ('testfile.html', 'w', encoding='utf-8') as f:
+    f.write(html_output)
