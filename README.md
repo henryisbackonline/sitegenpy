@@ -1,3 +1,8 @@
+# THIS PROJECT IS DEPRECATED
+I bit off *much* more than I could chew here. I'l get back to this one day, becauyse it's a cool project and I'd love to see it through, but it's taking more time than I have and tools like [Eleventy](https://11ty.dev) already exist.
+
+It was a nice idea. I'll get back to it one day.
+
 # Python Static Site Generator
 This repository contains a small static site generator written in Python.
 It’s a personal project designed to work for me and my needs. If you think it might work for you too, I encourage you to clone this repo and experiment.
