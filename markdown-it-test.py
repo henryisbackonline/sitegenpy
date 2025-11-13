@@ -29,16 +29,18 @@
 # =============================================================================================== #
 # TESTING FILE READ AND WRITE
 
-from markdown_it import MarkdownIt
+# from markdown_it import MarkdownIt
 
-md = MarkdownIt()
+# md = MarkdownIt()
 
-with open ('testfile.md', 'r', encoding='utf-8') as f:
-    markdown_text = f.read()
+# with open ('testfile.md', 'r', encoding='utf-8') as f:
+#     markdown_text = f.read()
 
-html_output = md.render(markdown_text)
+# html_output = md.render(markdown_text)
 
-with open ('testfile.html', 'w', encoding='utf-8') as f:
-    f.write(html_output)
+# with open ('testfile.html', 'w', encoding='utf-8') as f:
+#     f.write(html_output)
 
 # =============================================================================================== #
+# TESTING MARKDOWN FRONTMATTER READING
+
