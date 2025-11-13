@@ -1,3 +1,5 @@
-markkdown-it-py
-mdit_py_plugins
+markdown-it-py
+mdit-py-plugins
+mdurl
 pillow
+pyyaml
