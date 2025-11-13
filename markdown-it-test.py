@@ -55,7 +55,7 @@ frontmatter = {} # create an empty dictionary to store the frontmatter in
 def get_frontmatter(md, fm_text):
     "passes the string retieved by front_matter_plugin to pyyaml and adds it to the frontmatter dict"
     global frontmatter
-    frontmatter = yaml.safe_load(fm_text) # append the 
+    frontmatter = yaml.safe_load(fm_text) # append the frontmatter to the frontmatter dict
 
 md.options["extract_frontmatter"] = get_frontmatter
 
@@ -64,5 +64,6 @@ with open ('testfile.md', 'r', encoding='utf-8') as file:
 
 html_output = md.render(markdown_text)
 
-with open ('testfile.html', 'w', encoding='utf-8') as file:
+with open("testfile.txt", "w", encoding="utf8") as file:
+    file.write(str(frontmatter))
     file.write(html_output)
