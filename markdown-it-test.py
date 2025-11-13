@@ -67,3 +67,13 @@ html_output = md.render(markdown_text)
 with open("testfile.txt", "w", encoding="utf8") as file:
     file.write(str(frontmatter))
     file.write(html_output)
+
+# Interesting output here. The html went throuhg just fine. 
+# However front the output text file, it seems like noting was passed to the dict it is empty
+#
+# {} <-- text should live in there, but it ain't there man
+# <h1>Unmounting drives en masse with AppleScript</h1>
+# <p><em>I recently switched to using a Mac full-time. I wanted to escape from Windows and all the hassles that come with it, and I'll write about that soon, For now though, please enjoy this piece about a handy litte facet of macOS that makes my life a lot easier.</em></p>
+#
+# I'll have to play with this and figure out why.
+# Tn the meanime, I'm off to bed.
